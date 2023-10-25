@@ -1,0 +1,141 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyPlrBlqifnm8QayaYI1j7e+",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/AlwinBarredo/58009-DSAA/blob/main/LONGQUIZ2\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "EDGES"
+      ],
+      "metadata": {
+        "id": "4wpU1ITw4AvM"
+      }
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 2,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "tXmmuj1rIZzA",
+        "outputId": "4e8f689f-56d5-4b9e-c953-9171e8e3149f"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[{'I', 'H'}, {'J', 'H'}, {'K', 'H'}, {'I', 'E'}, {'I', 'F'}, {'E', 'J'}, {'F', 'J'}, {'E', 'M'}, {'K', 'E'}, {'F', 'K'}, {'F', 'P'}]\n"
+          ]
+        }
+      ],
+      "source": [
+        "class Graph:\n",
+        "    def __init__(self, gdict=None):\n",
+        "        if gdict is None:\n",
+        "            gdict = {}\n",
+        "        self.gdict = gdict\n",
+        "\n",
+        "    def edges(self):\n",
+        "        return self.find_edges()\n",
+        "\n",
+        "    def find_edges(self):\n",
+        "        edgename = []\n",
+        "        for vrtx in self.gdict:\n",
+        "            for nxtvrtx in self.gdict[vrtx]:\n",
+        "                if {nxtvrtx, vrtx} not in edgename:\n",
+        "                    edgename.append({vrtx, nxtvrtx})\n",
+        "        return edgename\n",
+        "\n",
+        "graph_elements = {\n",
+        "    'H': ['I', 'J', 'K'],\n",
+        "    'I': ['E', 'F', 'H'],\n",
+        "    'J': ['E', 'F', 'H'],\n",
+        "    'E': ['I', 'M', 'K', 'J'],\n",
+        "    'K': ['E', 'H', 'F'],\n",
+        "    'F': ['J', 'K', 'P', 'I'],\n",
+        "    'M': ['E'],\n",
+        "    'P': ['F']\n",
+        "}\n",
+        "g = Graph(graph_elements)\n",
+        "print(g.edges())"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "VERICES"
+      ],
+      "metadata": {
+        "id": "DZo-OVuA5vbi"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "class graph:\n",
+        "   def __init__(self,gdict=None):\n",
+        "      if gdict is None:\n",
+        "         gdict = []\n",
+        "      self.gdict = gdict\n",
+        "   def getVertices(self):\n",
+        "      return list(self.gdict.keys())\n",
+        "\n",
+        "graph_elements = {\n",
+        "    'H': ['I', 'J', 'K'],\n",
+        "    'J': ['E', 'F', 'H'],\n",
+        "    'I': ['E', 'F', 'H'],\n",
+        "    'F': ['J', 'K', 'P', 'I'],\n",
+        "    'K': ['E', 'H', 'F'],\n",
+        "    'E': ['I', 'M', 'K', 'J'],\n",
+        "    'P': ['F'],\n",
+        "    'M': ['E'],\n",
+        "}\n",
+        "g = graph(graph_elements)\n",
+        "print(g.getVertices())"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "CH-Qyk_Y32So",
+        "outputId": "0f76f73e-025f-498f-9cd6-17a7f51f48a8"
+      },
+      "execution_count": 3,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "['H', 'J', 'I', 'F', 'K', 'E', 'P', 'M']\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
