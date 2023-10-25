@@ -4,7 +4,7 @@
   "metadata": {
     "colab": {
       "provenance": [],
-      "authorship_tag": "ABX9TyPlrBlqifnm8QayaYI1j7e+",
+      "authorship_tag": "ABX9TyO+AefKZTBP5sVRVexsXGfc",
       "include_colab_link": true
     },
     "kernelspec": {
@@ -29,21 +29,21 @@
     {
       "cell_type": "markdown",
       "source": [
-        "EDGES"
+        "EDGES\n"
       ],
       "metadata": {
-        "id": "4wpU1ITw4AvM"
+        "id": "Cc9HZbe568Nd"
       }
     },
     {
       "cell_type": "code",
-      "execution_count": 2,
+      "execution_count": 4,
       "metadata": {
         "colab": {
           "base_uri": "https://localhost:8080/"
         },
         "id": "tXmmuj1rIZzA",
-        "outputId": "4e8f689f-56d5-4b9e-c953-9171e8e3149f"
+        "outputId": "6f639f59-efff-43cb-dce1-09e998dcfc50"
       },
       "outputs": [
         {
@@ -89,10 +89,10 @@
     {
       "cell_type": "markdown",
       "source": [
-        "VERICES"
+        "VERTICES"
       ],
       "metadata": {
-        "id": "DZo-OVuA5vbi"
+        "id": "4DjGF2YN7AjE"
       }
     },
     {
@@ -123,10 +123,10 @@
         "colab": {
           "base_uri": "https://localhost:8080/"
         },
-        "id": "CH-Qyk_Y32So",
-        "outputId": "0f76f73e-025f-498f-9cd6-17a7f51f48a8"
+        "id": "-d2bzh7U7CjE",
+        "outputId": "b19c03bb-1d4e-49f2-fb1a-53b5647e9c98"
       },
-      "execution_count": 3,
+      "execution_count": 5,
       "outputs": [
         {
           "output_type": "stream",
